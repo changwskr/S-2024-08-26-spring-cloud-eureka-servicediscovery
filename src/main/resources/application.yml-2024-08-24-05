@@ -1,0 +1,19 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: discoveryservice
+  cloud:
+    # -----------------------------------------------------------------------------------------------------------------
+    # discover service 가 어떤환경으로 작업을 할것인지 정한다. 그리고 이 정보는 config-service를 통해서 주입받는다.
+    # 여기서는 ecommerce 정보를 기준으로 한다.
+    # -----------------------------------------------------------------------------------------------------------------
+    config:
+      uri: http://127.0.0.1:8888
+      name: ecommerce
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

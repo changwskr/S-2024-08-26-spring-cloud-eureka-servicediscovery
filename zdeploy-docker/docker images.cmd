@@ -1,0 +1,1 @@
+docker image ls changwskr/my-discoveryservice:1.0
